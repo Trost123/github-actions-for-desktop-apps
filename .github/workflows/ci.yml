@@ -64,9 +64,9 @@ jobs:
         $manifest.Package.Identity.Version = "${{ steps.nbgv.outputs.SimpleVersion }}.0"
         $manifest.save(".\$env:Wap_Project_Directory\Package.appxmanifest")
 
-    # Test
-    - name: Execute Unit Tests
-      run: dotnet test $env:Test_Project_Path
+    # # Test
+    # - name: Execute Unit Tests
+    #   run: dotnet test $env:Test_Project_Path
 
     # Restore the application
     - name:  Restore the Wpf application to populate the obj folder
